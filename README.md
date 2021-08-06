@@ -7,12 +7,12 @@
 - **정리**의 중요성 잊지 말자!!
 - 적은 글도 **다시 보자**!!
 - **아무튼 해라!!**
-<br>
+<br><br>
 
 ## Categories
 - [Java](#Java)
 - [Coding Test](#Coding_Test)
-<br>
+<br><br>
 
 ## Contents
 ### Java
