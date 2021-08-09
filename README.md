@@ -16,7 +16,7 @@
 
 ## Contents
 ### Java
-- not yet
+- [Java - 기본 코드 구조, 문법](https://github.com/Im-hass/TIL/blob/master/Java/01_Java.md)
 <br>
 
 ### Coding_Test
