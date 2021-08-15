@@ -39,7 +39,7 @@ public class Main {
 
 ## 문법
 
-- **기본적인 문법**들은 **C와 거의 동일**하다. (02_Java.md 추가 예정)
+- **기본적인 문법**들은 **C와 거의 동일**하다. (추가 예정)
 
     for-문, while-문, switch문, if-else if-else문, 산술 연산자 등.
 
