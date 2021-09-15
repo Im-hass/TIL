@@ -312,3 +312,395 @@
     }
     ```
 <br>
+<br>
+
+## 3. Container - `justify-content`, `align-content`, `justify-items`, `align-items`
+
+> grid item을 정렬하는 방법.
+
+### 3-1. `justify-content`, `align-content`
+
+> 주축/교차축을 기준으로, item을 나열하는 방법을 지정한다.
+
+- 남는 공간이 있어야 적용된다.
+- **속성값**
+    - `start`
+    - `end`
+    - `center`
+    - `space-between`
+    - `space-around` : 항목을 고르게 배치한다. 이웃한 항목 간의 거리는 동일하고 첫 항목 이전 여백, 마지막 항목 이후 여백은 절반의 크기를 가진다.
+    - `space-evenly` : space-around와 동일하게 항목을 고르게 배치하는데, 첫 항목 이전 여백, 마지막 항목 이후 여백이 모두 같아진다.
+- **예제**
+
+    ![https://user-images.githubusercontent.com/77854486/133282896-2b5b4707-7e3b-4ef7-af00-7080de442738.png](https://user-images.githubusercontent.com/77854486/133282896-2b5b4707-7e3b-4ef7-af00-7080de442738.png)
+
+    ```html
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+    ```
+
+    ```css
+    .container {
+      height: 500px;
+
+      border: 5px dashed orange;
+
+      display: grid;
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 100px);
+
+      justify-content: space-between;
+    	align-content: space-between;
+    }
+
+    .item {
+      background-color: aquamarine;
+      border: 3px solid mediumaquamarine;
+      font-size: 24px;
+    }
+    ```
+
+### 3-2. `justify-items`, `align-items`
+
+> gird로 나누어진 한 칸의 내부 item을 주축/교차축을 기준으로 어디에 정렬 시킬지 지정한다.
+
+- grid로 나누어진 한 칸의 크기보다 내부 item의 크기가 작을 때 사용할 수 있다.
+- `justify-self`, `align-self`를 사용하여 각각의 item 하나에만 속성을 지정할 수도 있다.
+- **속성값**
+    - `stretch` : 기본값, 좌우를 한 칸의 크기만큼 길게 늘린다. `width`, `height`가 정해져 있으면 동작하지 않는다.
+    - `start`
+    - `end`
+- **예제**
+
+    ![https://user-images.githubusercontent.com/77854486/133286603-b733bc45-ba43-4a1f-90b3-43289c0673ca.png](https://user-images.githubusercontent.com/77854486/133286603-b733bc45-ba43-4a1f-90b3-43289c0673ca.png)
+
+    ```html
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+    ```
+
+    ```css
+    .container {
+      height: 500px;
+
+      border: 5px dashed orange;
+
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+
+      justify-items: center;
+      align-items: center;
+    }
+
+    .item {
+      background-color: aquamarine;
+      border: 3px solid mediumaquamarine;
+      font-size: 24px;
+    }
+
+    .item:nth-child(1) {
+      width: 50px;
+      height: 50px;
+    }
+    ```
+<br>
+<br>
+
+## 4. Item - `grid-row`, `grid-column`, `grid-area`, `order`, `z-index`
+
+### 4-1. `grid-row`, `grid-column`
+
+> 단축속성. 주축/교차축의 선을 기준으로 몇 번째 선부터 몇 번째 선까지 자리를 차지할지 지정할 수 있다.
+
+- `grid-row-start`, `gird-row-end` 속성을 포함한다.
+- 속성값으로 몇 번째 선인지에 대한 값이 들어간다.
+- `/` 를 기준으로 구분하여 앞쪽이 start 뒤쪽이 end이다.
+- `1 / 3`과 `1 / -2`는 동일한 결과가 나타난다.
+- 몇 번째 선인지 모를 경우에는 `span`을 사용하여 몇 칸까지 늘릴지 지정할 수 있다. ex) `1 / span 2` = 1번째 선부터 2칸 뒤 선(3)까지 차지한다.
+- `-`값은 명시적으로 작성한 `template`에만 적용된다.
+- 해당 요소가 차지하는 공간으로 인해서 넘쳐 흐른 item은 암시적인 요소로 밀려나게 된다.
+- **예제**
+
+    ![https://user-images.githubusercontent.com/77854486/133291228-00df71df-6443-4de8-aec4-461622f638ec.png](https://user-images.githubusercontent.com/77854486/133291228-00df71df-6443-4de8-aec4-461622f638ec.png)
+
+    ```html
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+    </div>
+    ```
+
+    ```css
+    .container {
+      border: 5px dashed orange;
+
+      display: grid;
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+      background-color: aquamarine;
+      border: 3px solid mediumaquamarine;
+      font-size: 24px;
+    }
+
+    .item:nth-child(1) {
+      background-color: rgb(145, 145, 250);
+
+      /* grid-row-start: 1;
+      grid-row-end: -1; */
+
+      grid-row: 1 / -1;
+    }
+    ```
+
+### 4-2. `grid-area`
+
+> 단축속성이다.
+
+- `grid-row-start`, `grid-column-start`, `grid-row-end`, `gird-colimn-end` 속성이 포함된다.
+- 또는 `grid-template-areas`에서 사용하기 위한 요소의 별명을 지정한다.
+- `/` 로 값이 구분되어 사용될 때는 단축속성이, 하나의 문자열이 작성될때는 별명이 지정된다.
+- `grid-row-start / grid-column-start / grid-row-end / grid-column-end` 순서로 작성된다.
+- **예제**
+
+    ![https://user-images.githubusercontent.com/77854486/133432706-ea271660-56b4-4f9a-ba96-8a851fe3fe50.png](https://user-images.githubusercontent.com/77854486/133432706-ea271660-56b4-4f9a-ba96-8a851fe3fe50.png)
+
+    ```html
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+    </div>
+    ```
+
+    ```css
+    .container {
+      border: 5px dashed orange;
+
+      display: grid;
+      grid-template-rows: repeat(5, 100px);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+      background-color: aquamarine;
+      border: 3px solid mediumaquamarine;
+      font-size: 24px;
+    }
+
+    .item:nth-child(1) {
+      background-color: rgb(145, 145, 250);
+      
+      /* grid-row-start: 4;
+      grid-row-end: span 2;
+      grid-column-start: 2;
+      grid-column-end: -1; */
+
+      /* grid-row: 4 / span 2;
+      grid-column: 2 / -1; */
+
+      grid-area: 4 / 2 / span 2 / -1;
+    }
+    ```
+
+### 4-3. `order`
+
+> flex 또는 gird container 안에서 현재 요소의 배치 순서를 지정한다.
+
+- 정렬 순서는 오름차순이고, 같은 값일 경우 코드 순서대로 정렬된다.
+- **속성값**
+    - `0` : 기본값이다.
+    - `<integer>` : 양수, 음수, 0 을 포함한 모든 숫자를 쓸 수 있다. 단, 소수는 불가능하다.
+- **예제**
+
+    ![https://user-images.githubusercontent.com/77854486/133433730-60a4ddd8-e074-4a39-b5f5-c8dd6a5ba7cf.png](https://user-images.githubusercontent.com/77854486/133433730-60a4ddd8-e074-4a39-b5f5-c8dd6a5ba7cf.png)
+
+    ```html
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+    ```
+
+    ```css
+    .container {
+      border: 5px dashed orange;
+
+      display: grid;
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+      background-color: aquamarine;
+      border: 3px solid mediumaquamarine;
+      font-size: 24px;
+    }
+
+    .item:nth-child(3) {
+      background-color: rgb(145, 145, 250);
+      order: 1;
+    }
+
+    .item:nth-child(5) {
+      background-color: rgb(145, 145, 250);
+      order: -1;
+    }
+    ```
+
+### 4-4. `z-index`
+
+> 쌓임 순서를  지정한다.
+
+- 지정되어 있지 않은 경우 코드 순서대로 위에 쌓인다.
+- **예제**
+
+    ![https://user-images.githubusercontent.com/77854486/133434784-4fba4338-7c23-421f-92bb-55d91ba36bd0.png](https://user-images.githubusercontent.com/77854486/133434784-4fba4338-7c23-421f-92bb-55d91ba36bd0.png)
+
+    ```html
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    ```
+
+    ```css
+    .container {
+      border: 5px dashed orange;
+
+      display: grid;
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+      background-color: aquamarine;
+      border: 3px solid mediumaquamarine;
+      font-size: 24px;
+      opacity: 0.7;
+    }
+
+    .item:nth-child(1) {
+      background-color: rgb(145, 145, 250);
+      grid-row: 1 / span2;
+      grid-column: 1 / span 2;
+
+      z-index: 1;
+    }
+
+    .item:nth-child(2) {
+      background-color: rgb(250, 145, 145);
+      grid-row: 1 / 2;
+      grid-column: 2 / 4;
+    }
+    ```
+<br>
+<br>
+
+## 5. Grid 단위 - `fr`, `min-content`, `max-content`, `auto-fill`, `auto-fit`
+
+### 5-1. `fr`
+
+> 비율을 지정한다.
+
+- 다른 단위와 함께 사용될 수 있고, 다른 단위의 범위를 제외한 나머지 부분에 대한 비율이다.
+
+### 5-2. `min-content`, `max-content`
+
+> 요소의 값(단어 길이)에 따라 최소/최대 크기에 맞춰진다.
+
+- 키워드 자체가 값으로 사용된다.
+- `min-content`는 가장 긴 단어의 길이에 맞춰지고, `max-content`는 모든 요소가 한 줄에 나열된다.
+
+### 5-3. `auto-fill`, `auto-fit`, `minmax(min, max)`
+
+> 컬럼의 개수를 유연하게 변경할 수 있다.
+
+- 남는 공간을 없애준다.
+- 반응형 웹에 많이 사용된다.
+- 기본적으로는 `auto-fill`, `auto-fit` 두 가지가 동일하게 동작한다. 내부 item의 개수가 부족하여 container의 width를 꽉 채우지 못할 때(남는 공간이 생길 때) 달라진다.
+    - `auto-fill` : 남는 공간이 비어있다.
+    - `auto-fit` : 남는 공간을 꽉 채운다.
+    - `minmax(min, max)` : 가장 작아질 수 있는 최소/최대의 크기를 지정할 수 있다. 최소 크기(min)보다 작아지면 최대 크기(max)를 사용하게 된다.
+- `grid-auto-rows` 속성을 사용하여 행의 수는 암시적으로 지정한다.
+- **예제**
+    - `repeat(3, 100px)`
+
+        ![https://user-images.githubusercontent.com/77854486/133440215-2008ef94-1dd3-4ab0-bf2d-74f438ed635b.png](https://user-images.githubusercontent.com/77854486/133440215-2008ef94-1dd3-4ab0-bf2d-74f438ed635b.png)
+
+    - `repeat(auto-fill, minmax(100px, 1fr))`
+
+        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9930d85-3f69-4bf4-babe-fe21ca6b6f4d/Untitled.png)
+
+    - `repeat(auto-fit, minmax(100px, 1fr))`
+
+        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/286b947a-eee9-472b-97ca-dc3ebb4cff9b/Untitled.png)
+
+    ```html
+    <div class="container">
+    	<div class="item">1</div>
+    	<div class="item">2</div>
+    	<div class="item">3</div>
+    	<div class="item">4</div>
+    	<div class="item">5</div>
+    	<div class="item">6</div>
+    	<div class="item">7</div>
+    </div>
+    ```
+
+    ```css
+    .container {
+      border: 5px dashed orange;
+
+      display: grid;
+
+    	/* grid-template-columns: repeat(3, 1fr); */
+
+      /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-auto-rows: 50px;
+    }
+
+    .item {
+      background-color: aquamarine;
+      border: 3px solid mediumaquamarine;
+      font-size: 24px;
+    }
+    ```
+<br>
+
