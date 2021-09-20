@@ -2,11 +2,10 @@
 
 ### ✍🏻 **Today I Learned**
 > 오늘 배운 것 정리하기.
-<br>
 
-- **정리**의 중요성 잊지 말자!!
-- 적은 글도 **다시 보자**!!
-- **아무튼 해라!!**
+✅ **정리**의 중요성 잊지 말자!!  
+✅ 적은 글도 **다시 보자**!!  
+✅ **아무튼 해라!!**
 <br>
 <br>
 
@@ -16,6 +15,7 @@
 - [Coding Test](#coding-test)
 - [HTML](#html)
 - [Java](#java)
+- [JavaScript](#javascript)
 <br>
 <br>
 
@@ -30,6 +30,13 @@
 - [폰트 관련 속성](https://github.com/Im-hass/TIL/blob/master/CSS/03_%ED%8F%B0%ED%8A%B8%20%EA%B4%80%EB%A0%A8%20%EC%86%8D%EC%84%B1.md)
 - [단위와 값](https://github.com/Im-hass/TIL/blob/master/CSS/04_%EB%8B%A8%EC%9C%84%EC%99%80%20%EA%B0%92.md)
 - [박스 모델](https://github.com/Im-hass/TIL/blob/master/CSS/05_%EB%B0%95%EC%8A%A4%20%EB%AA%A8%EB%8D%B8.md)
+- [레이아웃](https://github.com/Im-hass/TIL/blob/master/CSS/06_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83.md)
+- [색상과 배경](https://github.com/Im-hass/TIL/blob/master/CSS/07_%EC%83%89%EC%83%81%EA%B3%BC%20%EB%B0%B0%EA%B2%BD.md)
+- [transform](https://github.com/Im-hass/TIL/blob/master/CSS/08_transform.md)
+- [transition](https://github.com/Im-hass/TIL/blob/master/CSS/09_transition.md)
+- [animation](https://github.com/Im-hass/TIL/blob/master/CSS/10_%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98.md)
+- [flex](https://github.com/Im-hass/TIL/blob/master/CSS/11_flexbox.md)
+- [grid](https://github.com/Im-hass/TIL/blob/master/CSS/12_grid.md)
 <br>
 
 ### Coding Test
@@ -56,3 +63,8 @@
 - [기본 코드 구조, 문법](https://github.com/Im-hass/TIL/blob/master/Java/01_Java.md)
 - [자바 입출력](https://github.com/Im-hass/TIL/blob/master/Java/02_%EC%9E%85%EC%B6%9C%EB%A0%A5.md)  
 - [배열 정렬](https://github.com/Im-hass/TIL/blob/master/Java/03_%EC%A0%95%EB%A0%AC.md)
+<br>
+
+### JavaScript
+- [JavaScript의 자료형](https://github.com/Im-hass/TIL/blob/master/JavaScript/01_JavaScript%EC%9D%98%20%EC%9E%90%EB%A3%8C%ED%98%95.md)
+<br>
