@@ -150,7 +150,7 @@ console.log(`The factorial of ${num} is ${result}`); // The factorial of 3 is 6
 > **매개 변수를 통해 함수를 받아 호출하는 함수**. 즉, **콜백 함수를 실행하는 함수**이다.
 
 - 매개 변수로 **콜백 함수의 주소값이 들어간다.**
-- 자세한 설명은 [여기](https://www.notion.so/JavaScript-d9a36205d2b64f9895b156ceb6b0bff9) 참고.
+- 자세한 설명은 [여기](https://github.com/Im-hass/TIL/blob/master/JavaScript/13_%EA%B3%A0%EC%B0%A8%20%ED%95%A8%EC%88%98.md) 참고.
 
 ```jsx
 // 콜백 함수 add
