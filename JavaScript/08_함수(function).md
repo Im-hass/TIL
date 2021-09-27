@@ -55,10 +55,13 @@ const add = (x, y) => x + y;
 
 ### 호출
 
+> 선언 후, 호출을 해야 함수가 실행된다.
+
+- 호출 방법은 `함수명()`, `함수명.call()`, `함수명.apply()` 3가지가 있다.
 - JavaScript는 **매개 변수와 인수의 개수가 일치하는지 확인하지 않**기 때문에 에러가 발생하지 않는다.
 - ES6부터 undefined 변수가 들어올 경우 **초기값을 지정**할 수 있다.
 - 매개 변수를 선언하지 않아도(dynamic parameters) **내부 변수** `arguments[]`**를 통해 인자에 접근**할 수 있다. ( 단, 화살표 함수에는 `arguments`가 없다 )
-- 일반적으로 매개 변수를 선언하여(default value) 사용한다.
+- 일반적으로 매개 변수를 선언하여(default value) 사용한다.  
 
 ```jsx
 // 1. default value
@@ -109,6 +112,9 @@ console.log(dummy()); // undefined
 console.log(checkAge(14)); // false
 console.log(checkAge(20)); // true
 ```
+
+### 주요 메서드 (추가예정)
+
 <br>
 
 ## 8-2. 재귀 함수
