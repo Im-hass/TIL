@@ -1,9 +1,6 @@
 # 25. Date
-
----
-
 > **날짜와 시간을 위한 속성값과 메서드를 제공**하는 객체이다.
-> 
+
 - **표준 내장 객체**이다.
 - **1970년 1월 1일 UTC(협정 세계시) 자정**과의 **시간 차이를 밀리초 단위로 나타내는 정수값**으로 표현된다.
 
@@ -20,7 +17,7 @@
     - `new Date(milliseconds)`
     - `new Date(datestring)`
     - `new Date(year[, month, date, hours, minutes, seconds, ms])`
-        - `month` 값의 범위는 **1월(0) ~ 12월(11)**이다.
+        - `month` 값의 범위는 **1월(0) ~ 12월(11)이다.**
         - `입력한 인자 - 9시간` 기준으로 출력 된다.
         - `Date.UTC(year[, month, date, hours, minutes, seconds, ms])` **메서드**를 사용하여 인자 값을 받으면 **고정값으로 출력된다.**
 
