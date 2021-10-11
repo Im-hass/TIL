@@ -329,7 +329,7 @@ ht.print();
 - 여기서는 다른 해시 함수, djb2 hash function을 사용한다.
 - 가장 일반적으로 사용하는 해시 함수이다.
 - 소수를 사용하면 충돌 확률이 줄어든다.
-- 선형 조사법 [참고](#74-선형-조사법-해시-테이블Linear-probing-Hash-Table), 체이닝 [참고](#75-체이닝-해시-테이블Chaining-Hash-Table)
+- 선형 조사법 [참고](#7-4-선형-조사법-해시-테이블Linear-probing-Hash-Table), 체이닝 [참고](#7-5-체이닝-해시-테이블Chaining-Hash-Table)
 
 ```jsx
 const HASH_SIZE = 1013;
