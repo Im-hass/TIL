@@ -23,7 +23,7 @@
     - **루트 요소 반환, 크기 반환 :** `Heap.peek()`, `Heap.size()`
     - **최소힙/최대힙 - 노드 추가/정렬, 삭제/추출 :** `Heap.insert()`, `Heap.bubbleUp()`, `Heap.extract()`, `Heap.bubbleDown()`
 
-## 10-1. 힙 구현
+## 1. 힙 구현
 
 ### 생성
 
