@@ -13,7 +13,7 @@
 ### 기본 형태
 
 ```jsx
-  const readline = require("readline");
+  const readline = require('readline');
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -31,15 +31,15 @@
 rl.on('이벤트명', callback(매개변수){ 
 	// 입력 처리
 }).on('close', callback() {
-		process.exit();
+	process.exit();
 });
 */
 
 rl.on('line', function(line){ 
 	console.log("line : ", line);
 	rl.close(); // 없을 경우 무한으로 입력을 받는다.
-}).on('close', callback() {
-		process.exit();
+}).on('close', function() {
+pro	cess.exit();
 });
 ```
 
