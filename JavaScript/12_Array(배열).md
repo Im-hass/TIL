@@ -357,6 +357,80 @@ console.log(fruits.includes(0)); // false
     - 2차원 배열, **M개의 열에 각각 N개의 요소**들이 있다.
     - **2번의 참조로 값에 접근**할 수 있다.
 
+### 2차원 배열 선언 및 초기화
+
+> 크게 5가지 방법이 있다.
+> 
+1. **초기값 할당**
+    
+    ```jsx
+    let arr = [
+    	['a', 'b'],
+    	['c', 'd'],
+    	['e', 'f'],
+    ];
+    ```
+    
+2. **반복문 사용(빈 배열)**
+    
+    ```jsx
+    let arr = new Array(5);
+    
+    for(let i = 0; i < arr.length; i++) {
+    	// 빈 배열
+    	arr[i] = new Array(2);
+    
+    	// // 0으로 초기화
+    	// arr[i] = new Array(2).fill(0);
+    }
+    ```
+    
+3. **생성 함수**
+    
+    ```jsx
+    function create2DArray(rows, columns) {
+    	// 반복문 사용과 동일
+    	let arr = new Array(rows);
+    	
+    	for(let i = 0; i < rows; i++) {
+    		arr[i] = new Array(columns);
+    	}
+    
+    	return arr;
+    }
+    
+    let arr = create2DArray(5, 2); // arr[5][2]
+    ```
+    
+4. **Array 객체에 배열을 생성하는 함수를 추가**
+    
+    ```jsx
+    Array.matrix = function (m, n, initial) {
+        var a, i, j, mat = [];
+        for (i = 0; i < m; i += 1) {
+            a = [];
+            for (j = 0; j < n; j += 1) {
+                a[j] = initial;
+            }
+            mat[i] = a;
+        }
+        return mat;
+    };
+    
+    // matrix('행', '열', '기본값')
+    var arr = Array.matrix(5, 2, 0);
+    ```
+    
+5. **Array 객체의 from 메서드(ES6 최신 브라우저에서 사용 가능)**
+    
+    ```jsx
+    // arr[5][2] (빈 배열 생성)
+    const arr1 = Array.from(Array(5), () => new Array(2)
+    
+    // arr[5][2] (null로 초기화하여 생성)
+    const arr2 = Array.from(Array(5), () => Array(2).fill(null))
+    ```
+
 ### 2차원 배열 예제
 
 - 각각의 **요소들은** `Array[N][M]`**을 사용해 접근**한다.
@@ -427,3 +501,6 @@ fruit: ice, amount: 150
 */
 ```
 <br>
+
+# 참고
+- [N차원 배열 생성 및 초기화](https://gent.tistory.com/296)
