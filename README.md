@@ -1,15 +1,14 @@
-# TIL
-
-### ✍🏻 **Today I Learned**
+# ✍🏻 **Today I Learned**
 > 오늘 배운 것 정리하기.
 
 ✅ **정리**의 중요성 잊지 말자!!  
 ✅ 적은 글도 **다시 보자**!!  
 ✅ **아무튼 해라!!**
+
 <br>
 <br>
 
-## Categories
+# Categories
 - [Algorithm](#algorithm)
 - [CSS](#css)
 - [Coding Test](#coding-test)
@@ -17,17 +16,18 @@
 - [HTML](#html)
 - [Java](#java)
 - [JavaScript](#javascript)
+
 <br>
 <br>
 
-## Contents
-### Algorithm
+# Contents
+## Algorithm
 - [복잡도](https://github.com/Im-hass/TIL/blob/master/Algorithm/Complexity.md)
 - [순열, 조합](https://github.com/Im-hass/TIL/blob/master/Algorithm/02_%EC%88%9C%EC%97%B4%2C%20%EC%A1%B0%ED%95%A9.md)
 - [점화식(재귀식)](https://github.com/Im-hass/TIL/blob/master/Algorithm/03_%EC%9E%AC%EA%B7%80%EC%8B%9D.md)
 <br>
 
-### CSS
+## CSS
 - [개요](https://github.com/Im-hass/TIL/blob/master/CSS/01_%EA%B0%9C%EC%9A%94.md)
 - [선택자](https://github.com/Im-hass/TIL/blob/master/CSS/02_%EC%84%A0%ED%83%9D%EC%9E%90.md)
 - [폰트 관련 속성](https://github.com/Im-hass/TIL/blob/master/CSS/03_%ED%8F%B0%ED%8A%B8%20%EA%B4%80%EB%A0%A8%20%EC%86%8D%EC%84%B1.md)
@@ -42,7 +42,7 @@
 - [grid](https://github.com/Im-hass/TIL/blob/master/CSS/12_grid.md)
 <br>
 
-### Coding Test
+## Coding Test
 - BACKJOON
   - [15552 빠른 A + B](https://github.com/Im-hass/TIL/blob/master/Coding%20Test/BACKJOON/15552.md)
 - Programmers
@@ -51,12 +51,12 @@
   - [JS 배열 연습 문제](https://github.com/Im-hass/TIL/blob/master/Coding%20Test/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/JavaScript/Array%20%EC%97%B0%EC%8A%B5%20%EB%AC%B8%EC%A0%9C.md)
 <br>
 
-### Data Structure
+## Data Structure
 - [Prototype(프로토타입)](https://github.com/Im-hass/TIL/blob/master/Data%20Structure/01_Prototype.md)
 - [LinkedList(연결 리스트)](https://github.com/Im-hass/TIL/blob/master/Data%20Structure/02_LinkedList.md)
 <br>
 
-### HTML
+## HTML
 - [개요](https://github.com/Im-hass/TIL/blob/master/HTML/01_%EA%B0%9C%EC%9A%94.md)
 - [HTML이란](https://github.com/Im-hass/TIL/blob/master/HTML/03_HTML%EC%9D%B4%EB%9E%80.md)
 - [메타데이터](https://github.com/Im-hass/TIL/blob/master/HTML/04_%EB%A9%94%ED%83%80%EB%8D%B0%EC%9D%B4%ED%84%B0.md)
@@ -70,14 +70,14 @@
 - [Request Body](https://github.com/Im-hass/TIL/blob/master/HTML/html%20Request%20Body.md)
 <br>
 
-### Java
+## Java
 - [기본 코드 구조, 문법](https://github.com/Im-hass/TIL/blob/master/Java/01_Java.md)
 - [자바 입출력](https://github.com/Im-hass/TIL/blob/master/Java/02_%EC%9E%85%EC%B6%9C%EB%A0%A5.md)  
 - [배열 정렬](https://github.com/Im-hass/TIL/blob/master/Java/03_%EC%A0%95%EB%A0%AC.md)
 - [형변환](https://github.com/Im-hass/TIL/blob/master/Java/04_%ED%98%95%EB%B3%80%ED%99%98.md)
 <br>
 
-### JavaScript
+## JavaScript
 - [자료형](https://github.com/Im-hass/TIL/blob/master/JavaScript/01_JavaScript%EC%9D%98%20%EC%9E%90%EB%A3%8C%ED%98%95.md)
 - [자료형 : Number](https://github.com/Im-hass/TIL/blob/master/JavaScript/10_Number.md)
 - [자료형 : String](https://github.com/Im-hass/TIL/blob/master/JavaScript/11_String.md)
