@@ -1,4 +1,4 @@
-let input = require('fs').readFileSync('ex/2480_주사위세개.txt').toString().trim().split(' ');
+let input = require('fs').readFileSync('Coding Test/BACKJOON/ex/2480_주사위세개.txt').toString().trim().split(' ');
 solution(input[0], input[1], input[2]);
 
 function solution (a, b, c) {

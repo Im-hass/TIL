@@ -1,4 +1,4 @@
-const filepath = process.platform === 'linux' ? '/dev/stdin' : 'ex/10818_최소,최대.txt';
+const filepath = process.platform === 'linux' ? '/dev/stdin' : 'Coding Test/BACKJOON/ex/10818_최소,최대.txt';
 const [n, ...arr] = require('fs').readFileSync(filepath).toString().trim().split('\n');
 let input = arr[0].split(' ').map(Number);
 
