@@ -20,29 +20,29 @@ function solution(s) {
   let answer = s.length; // 압축된 문자열의 최댓값
 
   for (let i = 1; i <= parseInt(s.length / 2); i++) {
-    let str = ""; // 압축된 문자열
+    let tmp_str = ""; // 압축된 문자열
     let cnt = 1; // 압축된 문자 개수
-    let tempStr = s.substr(0, i); // 1개(0~1), 2개(0~2), 3개(0~3), ..., s.length/2개씩 문자를 자름
+    let prev = s.substr(0, i); // 1개(0~1), 2개(0~2), 3개(0~3), ..., s.length/2개씩 문자를 자름
 
-    for (let j = i; j < s.length; j += i) {
-      let nextStr = s.substr(j, i); // 1개, 2개, 3개, ..., s.length개씩 문자를 자름
+    for (let j = i; j < s.length; j += i) { // 임시 압축(prev) 이후(잘린 곳(i))부터 시작하여 문자열 끝까지 압축된 개수만큼 자름
+      let now = s.substr(j, i); // 압축된 개수만큼 자름
 
-      if (tempStr === nextStr) { // 동일할 경우 => 압축 가능하므로 cnt 증가
+      if (prev === now) { // 동일할 경우 => 압축 가능하므로 cnt 증가
         cnt += 1;
       } else { // 압축 불가능하므로 이전 문자 압축 끝내기, 새로운 압축
-        if (cnt === 1) str += tempStr; // 숫자가 1일 경우, 1을 생략하고 일부 압축
-        else str += cnt + tempStr; // 숫자를 붙여서 일부 압축
+        if (cnt === 1) tmp_str += prev; // 숫자가 1일 경우, 1을 생략하고 일부 압축
+        else tmp_str += cnt + prev; // 숫자를 붙여서 일부 압축
 
         cnt = 1;
-        tempStr = nextStr;
+        prev = now;
       }
     }
 
     // 마지막 남는 문자열 붙여주기
-    if (cnt === 1) str += tempStr; // 숫자가 1일 경우, 1을 생략하고 일부 압축
-    else str += cnt + tempStr; // 숫자를 붙여서 일부 압축
+    if (cnt === 1) tmp_str += prev; // 숫자가 1일 경우, 1을 생략하고 일부 압축
+    else tmp_str += cnt + prev; // 숫자를 붙여서 일부 압축
 
-    answer = Math.min(answer, str.length); // 이전과 비교하여 더 짧은 길이로 교체
+    answer = Math.min(answer, tmp_str.length); // 이전과 비교하여 더 짧은 길이로 교체
   }
 
   return answer;
