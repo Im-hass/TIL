@@ -36,6 +36,8 @@ function solution(s) {
         cnt = 1;
         prev = now;
       }
+
+      // console.log("str : " + str);
     }
 
     // 마지막 남는 문자열 붙여주기
