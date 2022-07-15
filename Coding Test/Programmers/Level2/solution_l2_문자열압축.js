@@ -24,8 +24,10 @@ function solution(s) {
     let cnt = 1; // 압축된 문자 개수
     let tempStr = s.substr(0, i); // 1개(0~1), 2개(0~2), 3개(0~3), ..., s.length/2개씩 문자를 자름
 
-    for (let j = i; j < s.length; j += i) {
-      let nextStr = s.substr(j, i); // 1개, 2개, 3개, ..., s.length개씩 문자를 자름
+    for (let j = i; j < s.length; j += i) { // 임시 압축(tempStr) 이후(잘린 곳(i))부터 시작하여 문자열 끝까지 압축된 개수만큼 자름
+      let nextStr = s.substr(j, i); // 압축된 개수만큼 자름
+      // console.log("temp : " + tempStr);
+      // console.log("next : " + nextStr);
 
       if (tempStr === nextStr) { // 동일할 경우 => 압축 가능하므로 cnt 증가
         cnt += 1;
@@ -36,12 +38,15 @@ function solution(s) {
         cnt = 1;
         tempStr = nextStr;
       }
+
+      // console.log("str : " + str);
     }
 
     // 마지막 남는 문자열 붙여주기
     if (cnt === 1) str += tempStr; // 숫자가 1일 경우, 1을 생략하고 일부 압축
     else str += cnt + tempStr; // 숫자를 붙여서 일부 압축
 
+    // console.log("last str : " + str);
     answer = Math.min(answer, str.length); // 이전과 비교하여 더 짧은 길이로 교체
   }
 
