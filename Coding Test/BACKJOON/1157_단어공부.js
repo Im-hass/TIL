@@ -1,4 +1,4 @@
-const filepath = process.platform === 'linux' ? '/dev/stdin' : 'Coding Test/BACKJOON/ex/1157_단어공부.txt';
+const filepath = process.platform === 'linux' ? '/dev/stdin' : '../../Coding Test/BACKJOON/ex/1157_단어공부.txt';
 const input = require('fs').readFileSync(filepath).toString().trim();
 
 console.log(solution(input));

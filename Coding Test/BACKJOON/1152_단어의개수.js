@@ -1,4 +1,4 @@
-const filepath = process.platform === 'linux' ? '/dev/stdin' : 'Coding Test/BACKJOON/ex/1152_단어의개수.txt';
+const filepath = process.platform === 'linux' ? '/dev/stdin' : '../../Coding Test/BACKJOON/ex/1152_단어의개수.txt';
 const input = require('fs').readFileSync(filepath).toString().trim().split(' ');
 
 let word = [];
