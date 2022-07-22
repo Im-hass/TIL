@@ -147,7 +147,7 @@ for (let i = 0; i < numbers.length; i++){
 ```
 ### 백준이 아닌 곳에서 예시 파일을 입력 받을 경우
 
-- `process.platform`을 확인하여 `'linux'`일 경우, 백준이므로 `/dev/stdin` 경로를 아닐 경우 예제가 있는 상대경로를 입력해준다.
+- `process.platform`을 확인하여 플랫폼이 `linux`라면 백준이므로 `/dev/stdin` 경로가 들어가고, 아닐 경우 예제가 있는 상대경로가 들어간다.
 
 ```jsx
 const filepath = process.platform === 'linux' ? '/dev/stdin' : '예제 파일이 있는 상대경로';
