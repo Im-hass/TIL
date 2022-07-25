@@ -27,7 +27,7 @@ Python을 사용하고 있다면, ```input``` 대신 ```sys.stdin.readline```을
 <br><br><br>
 
 ## 제출답
-```javascript
+```java
 import java.io.*;
 class Main {
     public static void main(String[] args) {

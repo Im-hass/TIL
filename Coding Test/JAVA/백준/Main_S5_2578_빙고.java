@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 // 빙고
 // 실5
 // 구현
-public class Main {
+public class Main_S5_2578_빙고 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
